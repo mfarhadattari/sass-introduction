@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASS Introduction</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <style>
+      .box {
+        border: 2px solid black;
+        margin: 5px 0px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-title">This is SASS Introduction</h1>
+    <div class="nesting">
+      <h1>Nesting Styles</h1>
+      <ul>
+        <li>
+          <p>Hello Programmer!</p>
+        </li>
+      </ul>
+    </div>
+    <div id="nesting1">
+      <h1>Nesting Properties</h1>
+    </div>
+    <div class="box">
+      <h1 class="important-title">@mixin and @include</h1>
+    </div>
+    <div class="box">
+      <button class="btn">Normal Button</button>
+      <button class="btn-primary">Primary Button</button>
+      <button class="btn-secondary">Secondary Button</button>
+    </div>
+    <div class="box">
+      <h1 class="text-condition">Conditional Sass</h1>
+    </div>
+    <div class="box">
+      <div class="col-1 box">Col-1</div>
+      <div class="col-2 box">Col-2</div>
+      <div class="col-3 box">Col-3</div>
+      <div class="col-4 box">Col-4</div>
+      <div class="col-5 box">Col-5</div>
+    </div>
+    <div class="box">
+      <span class="fs-1">fs-1</span>
+      <span class="fs-2">fs-2</span>
+      <span class="fs-3">fs-3</span>
+      <span class="fs-4">fs-4</span>
+      <span class="fs-5">fs-5</span>
+      <span class="fs-6">fs-6</span>
+    </div>
+    <div class="box">
+      <h1 class="text-primary">Text Primary</h1>
+      <h1 class="text-secondary">Text Secondary</h1>
+      <h1 class="text-info">Text Info</h1>
+      <h1 class="text-success">Text Success</h1>
+      <h1 class="text-danger">Text Danger</h1>
+    </div>
+  </body>
+</html>

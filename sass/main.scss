@@ -1,0 +1,138 @@
+@import "colors";
+
+// variable
+$myColor: red;
+$myFontSize: 18px;
+
+.main-title {
+  text-align: center;
+  color: $myColor;
+}
+
+// nesting style
+.nesting {
+  border: 2px solid black;
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  ul {
+    border: 1px dashed red;
+    li {
+      color: green;
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// nesting properties
+#nesting1 {
+  h1 {
+    font: {
+      size: 15px;
+      weight: 200;
+      style: italic;
+    }
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+  }
+
+  margin: {
+    top: 20px;
+    bottom: 20px;
+    left: auto;
+    right: auto;
+  }
+  padding: 20px;
+  border: {
+    width: 2px;
+    style: dotted;
+    radius: 10px;
+  }
+  width: 400px;
+}
+
+//@mixin and @include
+@mixin important-text($color) {
+  color: $color;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid red;
+  border-radius: 8px;
+}
+
+.important-title {
+  @include important-text(white);
+  background-color: green;
+  padding: 10px;
+}
+
+// @extend
+.btn {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.btn-primary {
+  @extend .btn;
+  background: $primary;
+  color: white;
+}
+
+.btn-secondary {
+  @extend .btn;
+  background: $secondary;
+  color: white;
+}
+
+// scss condition
+@mixin conditionalText($val) {
+  @if $val == danger {
+    color: red;
+  } @else if $val == alert {
+    color: yellow;
+  } @else if $val == success {
+    color: green;
+  } @else {
+    color: black;
+  }
+}
+
+.text-condition {
+  @include conditionalText(danger);
+}
+
+// for lopping
+@for $i from 1 through 5 {
+  .col-#{$i} {
+    width: 100%/5 * $i;
+  }
+}
+
+// while looping
+$j: 1;
+@while $j <= 6 {
+  .fs-#{$j} {
+    font-size: 16px * $j;
+  }
+  $j: $j + 1;
+}
+
+// mapping each of list
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}

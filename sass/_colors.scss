@@ -1,0 +1,13 @@
+// Sass Partials
+$primary: rgb(113, 113, 248);
+$secondary: rgb(194, 113, 248);
+$success: rgba(8, 243, 8, 0.863);
+$danger: rgb(238, 18, 18);
+$info: rgb(18, 212, 238);
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  danger: $danger,
+  success: $success,
+  info: $info,
+);
